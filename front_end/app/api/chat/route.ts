@@ -6,40 +6,55 @@ export const maxDuration = 30;
 
 // Comprehensive Knowledge-based fallback responder using verified PORTFOLIO_KNOWLEDGE
 function getFallbackAnswer(userQuestion: string): string {
-  const q = userQuestion.toLowerCase();
+  const q = userQuestion.toLowerCase().trim();
 
-  // Next.js & React experience
-  if (q.includes("next") || q.includes("react") || q.includes("kitna") || q.includes("experience") || q.includes("tajurba")) {
-    return "Shah Fahid is a Frontend-Focused Full Stack Developer with extensive production experience building performant web applications using React.js and Next.js (App Router). He has engineered headless e-commerce architectures, dynamic SSR blog platforms, and AI-driven streaming applications with strict TypeScript type-safety and 100 Lighthouse performance metrics. At Superior eCommerce Ltd (via Iconic Studio), he worked on enterprise headless storefronts for L'AZURDE Jewelry across KSA, Egypt, and UAE, delivering Apple Pay integration and sub-second performance.";
+  // Greetings & Pleasantries
+  if (q.includes("salam") || q.includes("hello") || q.includes("hi") || q.includes("hey") || q.includes("kaise") || q.includes("kese") || q.includes("haal")) {
+    return "Walaikum Assalam! Main Shah Fahid ka AI Representative hoon. Main aapko Shah Fahid ke production experience (Next.js, React, headless e-commerce), projects (L'AZURDE, Perky Pear), tech stack, aur hiring availability ke baare mein verified information de sakta hoon. Aap mujh se unke kaam ke mutaliq kuch bhi pooch sakte hain!";
+  }
+
+  // Who are you / Identity
+  if (q.includes("kon ho") || q.includes("who are you") || q.includes("intro") || q.includes("taaruf") || q.includes("about you")) {
+    return "Main Shah Fahid ka dedicated AI Technical Assistant hoon. Mera maqsad visitors, recruiters, aur prospective clients ko Shah Fahid ke verified credentials, production engineering track record (jaise L'AZURDE aur headless storefronts), aur direct contact channels ke baare mein quick aur accurate answers dena hai.";
+  }
+
+  // Location & City
+  if (q.includes("kahan") || q.includes("location") || q.includes("rehte") || q.includes("city") || q.includes("where") || q.includes("multan")) {
+    return "Shah Fahid Multan, Pakistan mein reside karte hain. Wo globally remote roles, freelance web engineering, aur technical consulting ke liye full-time available hain across UK, European, Middle Eastern, aur US time zone overlaps.";
+  }
+
+  // Next.js & React experience / Duration
+  if (q.includes("next") || q.includes("react") || q.includes("kitna") || q.includes("tajurba") || q.includes("kab se") || q.includes("years") || q.includes("experience")) {
+    return "Shah Fahid ke paas 3+ saal ka extensive production web engineering experience hai, jismein React.js, Next.js (App Router), TypeScript, aur Node.js shamil hain. Superior eCommerce Ltd (via Iconic Studio) mein unhone L'AZURDE Jewelry ke multi-regional headless storefront par Apple Pay express checkout integrate kiya aur Cloudflare edge CDN caching issues fix kiye. Wo 100 Lighthouse performance metrics ke saath scalable web apps banate hain.";
   }
 
   // E-Commerce & Projects (L'AZURDE, Shopify, BigCommerce)
-  if (q.includes("lazurde") || q.includes("ecommerce") || q.includes("e-commerce") || q.includes("shopify") || q.includes("bigcommerce") || q.includes("perky") || q.includes("project")) {
-    return "Shah Fahid has shipped notable production projects including: 1) L'AZURDE (lazurde.com) — multi-regional headless BigCommerce storefront serving KSA, Egypt, and UAE, where he implemented Apple Pay express checkout via PaymentRequest API and resolved Cloudflare edge caching token conflicts; 2) Perky Pear UK (perkypear.com) — high-converting Shopify theme engineering; 3) Marly Dan — production Shopify theme customization; and 4) Dynamic Blog & AI Portfolio — built with Next.js App Router, Sanity CMS, and real-time streaming.";
+  if (q.includes("lazurde") || q.includes("ecommerce") || q.includes("e-commerce") || q.includes("shopify") || q.includes("bigcommerce") || q.includes("perky") || q.includes("project") || q.includes("marly")) {
+    return "Shah Fahid ke major production projects mein shamil hain: 1) L'AZURDE (lazurde.com) — Middle East ka leading luxury jewelry brand jahan Apple Pay checkout aur CDN edge caching stabilize ki; 2) Perky Pear UK (perkypear.com) — UK D2C fashion brand ka custom Shopify theme engineering; 3) Marly Dan — production Shopify theme customization; aur 4) Dynamic Blog & Portfolio — built with Next.js App Router, Sanity CMS, aur real-time AI streaming.";
   }
 
-  // Contact & Hiring
-  if (q.includes("contact") || q.includes("hire") || q.includes("email") || q.includes("phone") || q.includes("whatsapp") || q.includes("rabta") || q.includes("number")) {
-    return "You can get in touch with Shah Fahid directly via Email at shahfahidbaloch@gmail.com or via WhatsApp / Phone at +92 336 8558700. He is actively available for full-time engineering roles, remote contracts, and freelance projects. You can also view his verified code on GitHub (https://github.com/ShahFahidbaloch) or connect on LinkedIn (https://www.linkedin.com/in/shah-fahid).";
+  // Contact, WhatsApp, Email, Phone
+  if (q.includes("contact") || q.includes("hire") || q.includes("email") || q.includes("phone") || q.includes("whatsapp") || q.includes("rabta") || q.includes("number") || q.includes("call")) {
+    return "Aap Shah Fahid se direct Email (shahfahidbaloch@gmail.com) ya direct WhatsApp/Phone (+92 336 8558700) par rabta kar sakte hain. Wo clients aur recruiters ko quick response dete hain. Inka verified code GitHub par bhi available hai: https://github.com/ShahFahidbaloch.";
   }
 
-  // Skills & Tech Stack
-  if (q.includes("skills") || q.includes("stack") || q.includes("technologies") || q.includes("tech") || q.includes("tools")) {
-    return "Shah Fahid's verified technical matrix includes: Frontend (React.js, Next.js App Router, TypeScript, Tailwind CSS, Zustand, TanStack Query, SASS), Mobile (React Native, Flutter), Backend & Databases (Node.js, Express.js, MongoDB, RESTful APIs), E-Commerce & CMS (Shopify Liquid, BigCommerce Headless, Sanity CMS), and Cloud/Edge (Cloudflare, Vercel, Git).";
+  // Skills & Technical Stack
+  if (q.includes("skill") || q.includes("stack") || q.includes("technolog") || q.includes("tools") || q.includes("languages") || q.includes("language")) {
+    return "Shah Fahid ka verified technical stack: Frontend (React.js, Next.js App Router, TypeScript, Tailwind CSS, Zustand, SASS), Mobile (React Native, Flutter), Backend & Databases (Node.js, Express.js, MongoDB, RESTful APIs), E-Commerce & Headless CMS (Shopify Liquid, BigCommerce, Sanity CMS), aur Cloud/Edge (Cloudflare CDN, Vercel, Git).";
   }
 
   // Education & Certifications
-  if (q.includes("education") || q.includes("degree") || q.includes("certif") || q.includes("university") || q.includes("padhai")) {
-    return "Shah Fahid is pursuing a Bachelor of Science in Computer Science (BSCS) at the Virtual University of Pakistan (Oct 2024 – Expected Aug 2028). He holds the Meta Front-End Developer Professional Certificate (Coursera) with verified coursework in React component architecture, UX principles, and modern frontend engineering.";
+  if (q.includes("education") || q.includes("degree") || q.includes("certif") || q.includes("university") || q.includes("padhai") || q.includes("parhai") || q.includes("college")) {
+    return "Shah Fahid Virtual University of Pakistan se Bachelor of Science in Computer Science (BSCS) kar rahe hain (2024–2028). Inke paas Meta Front-End Developer Professional Certificate (Coursera) bhi hai, jismein advanced React component architecture aur modern UX engineering verified hai.";
   }
 
-  // Availability & Work terms
-  if (q.includes("available") || q.includes("availability") || q.includes("freelance") || q.includes("remote") || q.includes("role") || q.includes("job")) {
-    return "Shah Fahid is currently available for full-time engineering roles, remote contracts, freelance web development, and technical consulting. He operates flexibly across remote time zones (including UK, Europe, Middle East, and US overlaps) with clear asynchronous communication.";
+  // Availability & Work terms / Pricing
+  if (q.includes("available") || q.includes("availability") || q.includes("freelance") || q.includes("remote") || q.includes("role") || q.includes("job") || q.includes("rate") || q.includes("price") || q.includes("charges")) {
+    return "Shah Fahid full-time engineering roles, remote contracts, freelance web development, aur technical consulting ke liye actively available hain. Wo flexible remote time zones (UK, EU, US, Gulf) mein asynchronous aur synchronous dono communication standards ke saath deliver karte hain.";
   }
 
   // Default professional summary
-  return "Shah Fahid is a Frontend-Focused Full Stack Developer specializing in React.js, Next.js (App Router), TypeScript, and headless e-commerce. He builds scalable, performant web applications with clean component architecture and minimal Apple-grade aesthetics. Feel free to ask about his work on L'AZURDE, technical skills, or get in touch at shahfahidbaloch@gmail.com (+92 336 8558700).";
+  return "Shah Fahid ek Frontend-Focused Full Stack Developer hain jo React.js, Next.js (App Router), TypeScript, aur headless e-commerce (Shopify & BigCommerce) mein deliver karte hain. Aap unke projects (L'AZURDE, Perky Pear), skills, experience, ya direct rabte ke baare mein mazeed pooch sakte hain (+92 336 8558700 / shahfahidbaloch@gmail.com).";
 }
 
 // Convert plain text into a streaming typewriter response
@@ -78,6 +93,8 @@ export async function POST(req: Request) {
       const lastMsg = messages[messages.length - 1];
       userQuestion = typeof lastMsg?.content === "string" ? lastMsg.content : "";
     }
+
+    console.log("[USER ASKED CHATBOT]:", userQuestion);
 
     const apiKey =
       process.env.GOOGLE_GENERATIVE_AI_API_KEY ||

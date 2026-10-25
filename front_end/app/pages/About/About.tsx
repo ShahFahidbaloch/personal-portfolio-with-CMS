@@ -49,13 +49,13 @@ const About: React.FC = () => {
                 {/* Header with live status */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse" />
-                    <span className="text-[10px] font-mono font-semibold text-rose-500 uppercase tracking-wider">
-                      4K Stream &amp; Record
+                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-900 dark:bg-white" />
+                    <span className="text-[10px] font-mono font-semibold text-neutral-800 dark:text-neutral-200 uppercase tracking-wider">
+                      Server Components
                     </span>
                   </div>
                   <span className="text-[10px] font-mono text-neutral-400 dark:text-neutral-500">
-                    Dual Canvas
+                    Responsive Canvas
                   </span>
                 </div>
 
@@ -71,7 +71,7 @@ const About: React.FC = () => {
                     Next.js App Router
                   </span>
                   <span className="text-[10px] font-mono text-neutral-500 dark:text-neutral-400 font-medium">
-                    10 guests on stage
+                    Zero CLS · 100 Score
                   </span>
                 </div>
               </div>
