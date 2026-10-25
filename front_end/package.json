@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": ">=22.x"
+  },
   "dependencies": {
     "@ai-sdk/google": "^4.0.105",
     "@ai-sdk/react": "^4.0.157",
