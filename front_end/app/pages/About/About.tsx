@@ -231,29 +231,29 @@ const About: React.FC = () => {
         </div>
 
         {/* ================= CARD 4: AI SOLUTIONS & 100 LIGHTHOUSE (col-span-7) ================= */}
-        <div className="lg:col-span-7 hero-card-surface rounded-[24px] sm:rounded-[36px] p-5 sm:p-7 lg:p-8 flex flex-col justify-between group transition-colors duration-300">
+        <div className="lg:col-span-7 hero-card-surface rounded-[24px] sm:rounded-[36px] p-5 sm:p-6 lg:p-7 flex flex-col justify-between group transition-colors duration-300 overflow-hidden">
           {/* Top Interactive Micro-UI: AI Stream Box & Circular 100 Score */}
-          <div className="w-full rounded-[18px] sm:rounded-[24px] bg-neutral-100/70 dark:bg-black/35 border border-black/[0.05] dark:border-white/[0.08] p-4 sm:p-5 mb-5 sm:mb-6 flex flex-col sm:flex-row items-center justify-between gap-5 shadow-inner">
+          <div className="w-full rounded-[18px] sm:rounded-[24px] bg-neutral-100/70 dark:bg-black/35 border border-black/[0.05] dark:border-white/[0.08] p-3.5 sm:p-4 mb-5 sm:mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 shadow-inner overflow-hidden">
             {/* OpenAI Real-time Streaming Prompt Box */}
-            <div className="flex-1 w-full flex items-center gap-3 bg-white dark:bg-[#202024] border border-black/[0.08] dark:border-white/10 p-3.5 rounded-2xl shadow-sm">
-              <div className="w-9 h-9 rounded-xl bg-[#10A37F]/10 flex items-center justify-center shrink-0">
-                <SiOpenai className="w-5 h-5 text-[#10A37F]" />
+            <div className="flex-1 min-w-0 w-full flex items-center gap-2.5 sm:gap-3 bg-white dark:bg-[#202024] border border-black/[0.08] dark:border-white/10 p-2.5 sm:p-3 rounded-2xl shadow-sm">
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-black/5 dark:bg-white/10 flex items-center justify-center shrink-0">
+                <SiOpenai className="w-4 h-4 sm:w-5 sm:h-5 text-neutral-900 dark:text-white" />
               </div>
-              <div className="flex flex-col text-left overflow-hidden">
+              <div className="flex flex-col text-left min-w-0 overflow-hidden">
                 <span className="text-[10px] font-mono text-neutral-400 dark:text-neutral-500 truncate">
                   prompt: &quot;Optimize bundle &amp; stream responses&quot;
                 </span>
-                <span className="text-xs font-semibold text-neutral-800 dark:text-neutral-200 flex items-center gap-1.5 mt-0.5">
+                <span className="text-xs font-semibold text-neutral-800 dark:text-neutral-200 flex items-center gap-1.5 mt-0.5 truncate">
                   Streaming 200ms TTFT
-                  <span className="inline-block w-1.5 h-3.5 bg-[#10A37F] animate-pulse" />
+                  <span className="inline-block w-1.5 h-3 bg-neutral-900 dark:bg-white animate-pulse shrink-0" />
                 </span>
               </div>
             </div>
 
             {/* Circular 100 Lighthouse Performance Gauge */}
-            <div className="flex items-center gap-3 shrink-0">
-              <div className="relative w-12 h-12 flex items-center justify-center">
-                <svg className="w-12 h-12 -rotate-90" viewBox="0 0 36 36">
+            <div className="flex items-center gap-2.5 sm:gap-3 shrink-0 self-end sm:self-center">
+              <div className="relative w-11 h-11 flex items-center justify-center shrink-0">
+                <svg className="w-11 h-11 -rotate-90" viewBox="0 0 36 36">
                   <path
                     className="text-neutral-200 dark:text-neutral-700"
                     strokeWidth="3.2"
@@ -262,7 +262,7 @@ const About: React.FC = () => {
                     d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                   />
                   <path
-                    className="text-[#10A37F]"
+                    className="text-neutral-950 dark:text-white"
                     strokeDasharray="100, 100"
                     strokeWidth="3.2"
                     strokeLinecap="round"
@@ -271,15 +271,15 @@ const About: React.FC = () => {
                     d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                   />
                 </svg>
-                <span className="absolute text-xs font-bold text-neutral-900 dark:text-white font-mono">
+                <span className="absolute text-[11px] sm:text-xs font-bold text-neutral-900 dark:text-white font-mono">
                   100
                 </span>
               </div>
               <div className="flex flex-col text-left">
-                <span className="text-xs font-semibold text-neutral-800 dark:text-neutral-200">
+                <span className="text-xs font-semibold text-neutral-800 dark:text-neutral-200 whitespace-nowrap">
                   Lighthouse 100
                 </span>
-                <span className="text-[10px] text-neutral-400 dark:text-neutral-500">
+                <span className="text-[10px] text-neutral-400 dark:text-neutral-500 whitespace-nowrap">
                   Maximum Speed
                 </span>
               </div>

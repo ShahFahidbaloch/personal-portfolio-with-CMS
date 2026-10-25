@@ -37,7 +37,7 @@ const COPY = {
   name: "Shah Fahid",
   eyebrow: "Product engineer with a designer's eye",
   sub: "Engineering logic, design taste. I ship products that load fast, look sharp and are built to convert.",
-  proof: "50+ projects shipped",
+  proof: "15+ projects shipped",
   primary: "View my work",
   secondary: "Download CV",
 };

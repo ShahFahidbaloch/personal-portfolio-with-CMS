@@ -86,6 +86,7 @@ const PROJECTS_DATA: Project[] = [
     image: "/projects/blog.jpg",
     liveUrl: "https://blogs-site-vert.vercel.app/",
     githubUrl: "https://github.com/ShahFahidbaloch/blogs-site",
+    clientType: "Full Stack SSR",
   },
   {
     id: "portfolio-ai",
@@ -96,6 +97,7 @@ const PROJECTS_DATA: Project[] = [
     image: "/projects/portfolio.jpg",
     liveUrl: "https://shahfahid.vercel.app/",
     githubUrl: "https://github.com/ShahFahidbaloch/personal-portfolio-with-CMS",
+    clientType: "AI Production",
   },
 ];
 
@@ -225,42 +227,47 @@ const WorkSection: React.FC = () => {
                 </div>
 
                 {/* Bottom Half: Clean Action Pills & Live Preview */}
-                <div className="mt-5 pt-4 border-t border-black/[0.05] dark:border-white/[0.06] flex flex-wrap items-center justify-between gap-2">
-                  {/* Left: Regional Pills or Verified Client Badge */}
-                  <div className="flex flex-wrap items-center gap-1.5">
+                <div className="mt-5 pt-4 border-t border-black/[0.05] dark:border-white/[0.06] flex items-center justify-between gap-2 overflow-hidden">
+                  {/* Left: Compact Regional Links or Verified Client Badge */}
+                  <div className="flex items-center gap-1.5 shrink-0 min-w-0">
                     {project.regionalLinks ? (
-                      project.regionalLinks.map((regional) => (
-                        <a
-                          key={regional.label}
-                          href={regional.url}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="bg-neutral-100 hover:bg-neutral-200 text-neutral-800 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-200 px-2.5 py-1 rounded-full text-xs font-medium border border-black/[0.05] dark:border-white/[0.08] inline-flex items-center gap-1 transition-colors"
-                        >
-                          {regional.label}
-                          <ArrowUpRight className="w-3 h-3 text-neutral-400" />
-                        </a>
-                      ))
+                      <div className="flex items-center gap-1">
+                        <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mr-0.5">
+                          Stores:
+                        </span>
+                        {project.regionalLinks.map((regional) => (
+                          <a
+                            key={regional.label}
+                            href={regional.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            title={regional.label}
+                            className="text-[11px] font-mono font-medium px-2 py-0.5 rounded-full bg-neutral-100 hover:bg-neutral-200 dark:bg-white/[0.06] dark:hover:bg-white/[0.12] text-neutral-700 dark:text-neutral-300 transition-colors border border-black/[0.04] dark:border-white/[0.06]"
+                          >
+                            {regional.label.split(" ")[0]}
+                          </a>
+                        ))}
+                      </div>
                     ) : project.clientType ? (
-                      <span className="text-[11px] font-medium text-neutral-500 dark:text-neutral-400 px-2.5 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800/60 border border-black/[0.04] dark:border-white/[0.06] inline-flex items-center gap-1">
-                        <ShieldCheck className="w-3 h-3 text-neutral-500 dark:text-neutral-400" />
-                        {project.clientType}
+                      <span className="text-[11px] font-medium text-neutral-500 dark:text-neutral-400 px-2.5 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800/60 border border-black/[0.04] dark:border-white/[0.06] inline-flex items-center gap-1 truncate">
+                        <ShieldCheck className="w-3 h-3 text-neutral-500 dark:text-neutral-400 shrink-0" />
+                        <span className="truncate">{project.clientType}</span>
                       </span>
                     ) : null}
                   </div>
 
                   {/* Right: Mandatory Live Preview & GitHub Button */}
-                  <div className="flex items-center gap-1.5 ml-auto">
+                  <div className="flex items-center gap-1.5 ml-auto shrink-0">
                     {project.githubUrl && (
                       <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noreferrer"
                         aria-label={`${project.title} Source Code`}
-                        className="bg-neutral-100 hover:bg-neutral-200 text-neutral-700 dark:bg-white/10 dark:text-neutral-300 dark:hover:bg-white/15 px-3 py-1.5 rounded-full text-xs font-medium inline-flex items-center gap-1.5 border border-black/[0.04] dark:border-white/[0.06] transition-colors"
+                        className="bg-neutral-100 hover:bg-neutral-200 text-neutral-700 dark:bg-white/10 dark:text-neutral-300 dark:hover:bg-white/15 px-2.5 sm:px-3 py-1.5 rounded-full text-xs font-medium inline-flex items-center gap-1.5 border border-black/[0.04] dark:border-white/[0.06] transition-colors whitespace-nowrap"
                       >
                         <Github className="w-3.5 h-3.5" />
-                        <span>Source</span>
+                        <span className="hidden xs:inline sm:inline">Source</span>
                       </a>
                     )}
 
@@ -269,7 +276,7 @@ const WorkSection: React.FC = () => {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="bg-neutral-900 hover:bg-neutral-800 text-white dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200 px-3.5 py-1.5 rounded-full text-xs font-medium inline-flex items-center gap-1.5 shadow-sm transition-colors"
+                      className="bg-neutral-900 hover:bg-neutral-800 text-white dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200 px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-medium inline-flex items-center gap-1.5 shadow-sm transition-colors whitespace-nowrap"
                     >
                       <span>Live Preview</span>
                       <ArrowUpRight className="w-3.5 h-3.5 opacity-80" />
