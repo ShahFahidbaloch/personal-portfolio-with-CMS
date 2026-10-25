@@ -1,157 +1,94 @@
-.app__skills {
-  flex: 1;
+/* =====================================================================
+   SKILLS & EXPERIENCE — APPLE MONOCHROME & CLOUDFLARE X-STAGE
+   ===================================================================== */
+
+#skills {
+  position: relative;
   width: 100%;
-  flex-direction: column;
-}
+  max-width: 100%;
+  overflow-x: hidden;
 
-.app__skills-container {
-  width: 80%;
-  margin-top: 3rem;
-
-  display: flex;
-  flex-direction: row;
-
-  @media screen and (max-width: 900px) {
-    width: 100%;
+  .app__wrapper {
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    display: flex;
     flex-direction: column;
-  }
-}
-
-.app__skills-list {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  margin-right: 5rem;
-
-  @media screen and (max-width: 900px) {
-    margin-right: 0;
-    justify-content: center;
     align-items: center;
   }
 }
 
-.app__skills-item {
-  flex-direction: column;
-  text-align: center;
+/* ───────────────────────────── TWO PRECISION CROSS-LINE KEYFRAMES ───────────────────────────── */
 
-  margin: 1rem;
-
-  transition: all 0.3s ease-in-out;
-
-  div {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background-color: #fef4f5;
-
-    img {
-      width: 50%;
-      height: 50%;
-    }
-
-    &:hover {
-      box-shadow: 0 0 25px #fef4f5;
-    }
-
-    @media screen and (min-width: 2000px) {
-      width: 150px;
-      height: 150px;
-    }
-
-    @media screen and (max-width: 450px) {
-      width: 70px;
-      height: 70px;
-    }
+/* Track 1: Ascending Diagonal (Bottom-Left to Top-Right) */
+@keyframes slideTrack1 {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
   }
-
-  p {
-    font-weight: 500;
-    margin-top: 0.5rem;
+  4% {
+    opacity: 1;
   }
-
-  @media screen and (min-width: 2000px) {
-    margin: 1rem 2rem;
-
-    p {
-      margin-top: 1rem;
-    }
+  96% {
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
   }
 }
 
-.app__skills-exp {
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-
-  @media screen and (max-width: 900px) {
-    margin-top: 2rem;
+/* Track 2: Descending Diagonal (Top-Left to Bottom-Right) */
+@keyframes slideTrack2 {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  4% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
   }
 }
 
-.app__skills-exp-item {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 1rem 0;
+/* Track Offset Paths (Strictly bounded to exactly two cross-lines) */
+.skill-track-1 {
+  /* Ascending Diagonal Track */
+  offset-path: path("M 80,520 C 360,420 740,200 1120,100");
+  offset-rotate: 0deg;
+  animation: slideTrack1 24s linear infinite;
+  will-change: offset-distance, opacity;
+  z-index: 25;
 }
 
-.app__skills-exp-works {
-  flex: 1;
-
-  .app__skills-exp-work {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-    cursor: pointer;
-
-    h4 {
-      font-weight: 500;
-    }
-
-    p {
-      font-weight: 400;
-      color: var(--gray-color);
-      margin-top: 5px;
-    }
-  }
+.skill-track-2 {
+  /* Descending Diagonal Track (Crosses Track 1 in exact center!) */
+  offset-path: path("M 80,100 C 360,200 740,420 1120,520");
+  offset-rotate: 0deg;
+  animation: slideTrack2 26s linear infinite;
+  will-change: offset-distance, opacity;
+  z-index: 24;
 }
 
-.app__skills-exp-year {
-  margin-right: 3rem;
-
-  p {
-    font-weight: 800;
-    color: var(--secondary-color);
-  }
-
-  @media screen and (max-width: 450px) {
-    margin-right: 1rem;
-  }
+/* Hardware-accelerated Smooth Glide */
+.skill-card-glide {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: offset-distance, opacity, transform;
 }
 
-.skills-tooltip {
-  max-width: 300px !important;
-  background-color: var(--white-color) !important;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
-  border-radius: 5px !important;
-  padding: 1rem !important;
-  color: var(--gray-color) !important;
-  text-align: center !important;
-  line-height: 1.5 !important;
-  opacity: 1 !important;
+/* Smooth Hover Pausing */
+.stage-container:hover .skill-card-glide {
+  animation-play-state: running;
+}
 
-  @media screen and (min-width: 2000px) {
-    font-size: 1.75rem !important;
-    max-width: 500px !important;
-    line-height: 2 !important;
-  }
+.skill-card-glide:hover {
+  animation-play-state: paused !important;
+  z-index: 50 !important;
 }

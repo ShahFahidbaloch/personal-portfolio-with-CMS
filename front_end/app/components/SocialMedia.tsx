@@ -1,27 +1,41 @@
-import Link from 'next/link';
-import React from 'react';
-import { BsInstagram, BsLinkedin } from 'react-icons/bs';
-// import { FaFacebookF } from 'react-icons/fa';
-import { FaGithub } from 'react-icons/fa';
+import Link from "next/link";
+import React from "react";
+import { BsInstagram, BsLinkedin } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
+
 interface SocialMediaProps {
-  BsLinkedin?: boolean; 
-  FaGithub?: boolean;   
-  BsInstagram?: boolean; 
+  BsLinkedin?: boolean;
+  FaGithub?: boolean;
+  BsInstagram?: boolean;
 }
 
-
 const SocialMedia: React.FC<SocialMediaProps> = () => (
-  <div className="app__social">
-    <Link className="mb-5 " href='https://www.linkedin.com/in/shah-fahid-a4543027b/' target='_blank'>
-      <BsLinkedin className=" hover:bg-blue-700"/>
+  <aside className="app__social" aria-label="Social media profiles">
+    <Link
+      href="https://www.linkedin.com/in/shah-fahid-a4543027b/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit LinkedIn profile"
+    >
+      <BsLinkedin aria-hidden="true" />
     </Link>
-    <Link className="hover:bg-black-800" href='https://github.com/mrfahid' target="_blank">
-      <FaGithub className="hover:bg-slate-400"/>
+    <Link
+      href="https://github.com/ShahFahidbaloch"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit GitHub profile"
+    >
+      <FaGithub aria-hidden="true" />
     </Link>
-    <Link className="mt-5" href="https://www.instagram.com/mr_fahid.dev/" target="_blank">
-      <BsInstagram className="hover:bg-red-400"/>
+    <Link
+      href="https://www.instagram.com/mr_fahid.dev/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit Instagram profile"
+    >
+      <BsInstagram aria-hidden="true" />
     </Link>
-  </div>
+  </aside>
 );
 
 export default SocialMedia;

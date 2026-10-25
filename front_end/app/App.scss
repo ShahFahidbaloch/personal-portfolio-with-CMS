@@ -31,11 +31,14 @@
   .app__wrapper {
     flex: 1;
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     flex-direction: column;
-    padding: 4rem 2rem;
+    padding: 2rem 1.5rem;
+    overflow-x: hidden;
   
-    @media screen and (max-width: 450px) {
-      padding: 4rem 1rem 2rem;
+    @media screen and (max-width: 640px) {
+      padding: 1rem 0.5rem;
     }
   }
   
@@ -104,87 +107,151 @@
   
   .app__social {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-  
-    padding: 1rem;
-  
-    div {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: var(--white-color);
-      margin: 0.25rem 0;
-      border: 1px solid var(--lightGray-color);
-  
+    padding: 0.85rem 0.55rem;
+    background: rgba(15, 23, 42, 0.82);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 9999px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    margin: 0 1rem 2rem 1.5rem;
+    align-self: flex-end;
+    gap: 0.85rem;
+    z-index: 30;
+
+    a {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-  
-      transition: all 0.3s ease-in-out;
-  
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: rgba(255, 255, 255, 0.88);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
       svg {
-        width: 15px;
-        height: 15px;
-        color: var(--gray-color);
+        width: 17px;
+        height: 17px;
+        transition: transform 0.3s ease;
       }
-  
+
+      // Google Bard / Gemini AI Iridescent Gradient Aura on Hover
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        padding: 1.5px;
+        background: linear-gradient(135deg, #4285f4 0%, #9b72cf 50%, #d96570 100%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: scale(0.85);
+      }
+
       &:hover {
-        background-color: var(--secondary-color);
-        border-color: var(--secondary-color);
-  
+        color: #ffffff;
+        transform: translateY(-2px) scale(1.15);
+        background: radial-gradient(circle, rgba(155, 114, 207, 0.25) 0%, rgba(66, 133, 244, 0.15) 100%);
+        box-shadow:
+          0 0 16px rgba(155, 114, 207, 0.6),
+          0 0 24px rgba(66, 133, 244, 0.35);
+
+        &::before {
+          opacity: 1;
+          transform: scale(1);
+        }
+
         svg {
-          color: var(--white-color);
+          transform: scale(1.1);
+          filter: drop-shadow(0 0 6px #9b72cf);
         }
       }
-  
-      @media screen and (min-width: 2000px) {
-        width: 70px;
-        height: 70px;
-  
-        margin: 0.5rem 0;
-  
-        svg {
-          width: 30px;
-          height: 30px;
+    }
+
+    // High Contrast Light Mode for ALL light sections (About, Work, Skills, etc.)
+    html:not(.dark) &,
+    .light & {
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(15, 23, 42, 0.16);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+
+      a {
+        color: #1e293b;
+
+        &:hover {
+          color: #1e1b4b;
+          background: radial-gradient(circle, rgba(155, 114, 207, 0.2) 0%, rgba(66, 133, 244, 0.15) 100%);
+          box-shadow:
+            0 0 14px rgba(155, 114, 207, 0.5),
+            0 0 22px rgba(66, 133, 244, 0.3);
+
+          svg {
+            filter: drop-shadow(0 0 5px #9b72cf);
+          }
         }
       }
     }
   }
-  
+
   .app__navigation {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  
     padding: 1rem;
-  
+    z-index: 30;
+
     .app__navigation-dot {
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background-color: #cbcbcb;
+      background-color: rgba(255, 255, 255, 0.35);
       margin: 0.5rem;
-  
-      transition: background-color 0.2s ease-in-out;
-  
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
       &:hover {
-        background-color: var(--secondary-color);
+        background: linear-gradient(135deg, #4285f4, #9b72cf);
+        transform: scale(1.4);
+        box-shadow: 0 0 12px rgba(155, 114, 207, 0.7);
       }
-  
-      @media screen and (min-width: 2000px) {
-        width: 20px;
-        height: 20px;
+
+      &[aria-current="true"] {
+        background: linear-gradient(135deg, #38bdf8, #818cf8) !important;
+        box-shadow: 0 0 12px #38bdf8, 0 0 20px rgba(129, 140, 248, 0.6);
+        transform: scale(1.25);
+      }
+
+      // High-contrast Light Mode dots visible across all light sections
+      html:not(.dark) &,
+      .light & {
+        background-color: rgba(30, 41, 59, 0.35);
+        border: 1px solid rgba(30, 41, 59, 0.2);
+
+        &:hover {
+          background: linear-gradient(135deg, #2563eb, #7c3aed);
+          box-shadow: 0 0 10px rgba(124, 58, 237, 0.6);
+        }
+
+        &[aria-current="true"] {
+          background: linear-gradient(135deg, #2563eb, #4f46e5) !important;
+          box-shadow: 0 0 10px rgba(37, 99, 235, 0.7);
+        }
       }
     }
   }
   
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 768px) {
     .app__navigation,
     .app__social {
-      display: none;
+      display: none !important;
     }
   
     .copyright {

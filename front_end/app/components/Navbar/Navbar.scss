@@ -1,182 +1,511 @@
-.app__navbar {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+.app__navbar-wrapper {
   position: fixed;
-  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  width: 100%;
+  pointer-events: none;
 }
 
-.app__navbar-logo {
+// iPhone Dynamic Island / Notification Capsule
+.app__navbar-glass {
+  pointer-events: auto;
+  width: auto;
+  max-width: 820px;
+  min-width: 320px;
+  margin: 0 auto;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  
-  .head-text {
-    font-size: 1.5em;
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2px;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.45rem 1.25rem;
+
+  border-radius: 9999px;
+
+  /* LIGHT MODE DEFAULT: Apple Black capsule matching the photo card */
+  background: radial-gradient(70% 55% at 50% 10%, rgba(255, 255, 255, 0.12) 0%, transparent 65%),
+    radial-gradient(70% 65% at 50% 90%, rgba(56, 130, 246, 0.16) 0%, transparent 70%),
+    #0c0d12;
+  backdrop-filter: blur(30px) saturate(190%);
+  -webkit-backdrop-filter: blur(30px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 18px 40px -4px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.4);
+
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.26);
+    box-shadow:
+      0 22px 45px -4px rgba(0, 0, 0, 0.55),
+      inset 0 1px 0 rgba(255, 255, 255, 0.28);
   }
-  
- .head-text span {
-    color: black;
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--secondary-color);
-  }
 
-  img {
-    width: 90px;
-    height: 20px;
-
-    @media screen and (min-width: 2000px) {
-      width: 180px;
-      height: 40px;
-    }
-  }
-}
-
-.app__navbar-links {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-
-  li {
-    margin: 0 1rem;
-    cursor: pointer;
-    flex-direction: column;
-
-    div {
-      width: 5px;
-      height: 5px;
-      background: transparent;
-      border-radius: 50%;
-      margin-bottom: 5px;
-    }
-
-    a {
-      color: var(--gray-color);
-      text-decoration: none;
-      flex-direction: column;
-      text-transform: uppercase;
-      font-weight: 500;
-      transition: all 0.3s ease-in-out;
-
-      &:hover {
-        color: var(--secondary-color);
-      }
-    }
+  /* DARK MODE: Clean, frosted Apple White capsule */
+  html.dark &,
+  body.dark &,
+  .dark &,
+  [data-theme='dark'] & {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow:
+      0 20px 45px -4px rgba(0, 0, 0, 0.55),
+      0 6px 18px rgba(0, 0, 0, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 1);
 
     &:hover {
-      div {
-        background: var(--secondary-color);
-      }
+      border-color: rgba(255, 255, 255, 0.95);
+      box-shadow:
+        0 24px 50px -4px rgba(0, 0, 0, 0.65),
+        0 8px 22px rgba(0, 0, 0, 0.3);
     }
+  }
+
+  // Smoothly hides the dynamic island capsule when mobile drawer is open to prevent duplicate logos
+  &.navbar-pill--hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-16px) scale(0.94);
+    transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+// Brand
+.app__navbar-brand {
+  .brand-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    user-select: none;
+  }
+
+  .brand-shah {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+
+    /* In dark mode (white navbar): near-black text */
+    html.dark &,
+    body.dark &,
+    .dark &,
+    [data-theme='dark'] & {
+      color: #0f172a;
+    }
+  }
+
+  .brand-fahid {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #38bdf8;
+    margin-left: 0.3rem;
+    text-shadow: 0 0 14px rgba(56, 189, 248, 0.6);
+
+    /* In dark mode (white navbar): vibrant royal blue */
+    html.dark &,
+    body.dark &,
+    .dark &,
+    [data-theme='dark'] & {
+      color: #2563eb;
+      text-shadow: none;
+    }
+  }
+}
+
+.app__navbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.app__navbar-notch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+// iOS Segmented Navigation Pills
+.app__navbar-center-links {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  /* In dark mode (white navbar): light-grey segmented track */
+  html.dark &,
+  body.dark &,
+  .dark &,
+  [data-theme='dark'] & {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.06);
   }
 
   @media screen and (max-width: 900px) {
     display: none;
   }
-}
 
-.app__navbar-menu {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--secondary-color);
-  z-index: 10; // Ensure this has a higher z-index than the menu div
-
-  svg {
-    width: 70%;
-    height: 70%;
-    color: var(--white-color);
-    cursor: pointer;
+  .nav-item-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  > div {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 5;
-
-    padding: 1rem;
-    width: 80%;
-    height: 100vh;
+  .nav-item-link {
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: #94a3b8;
+    padding: 6px 14px;
+    border-radius: 9999px;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex-direction: column;
-    background: url("../../assets/bgWhite.png");
-    background-color: var(--white-color);
-    background-size: cover;
-    background-repeat: repeat;
-    box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
 
-    svg {
-      width: 35px;
-      cursor: pointer;
-      height: 35px;
-      color: var(--secondary-color);
-      margin: 0.5rem 1rem;
-      z-index: 11;
+    .nav-label {
+      position: relative;
+      z-index: 2;
     }
 
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
+    &:hover {
+      color: #ffffff;
+    }
+
+    /* In dark mode (white navbar): slate grey links */
+    html.dark &,
+    body.dark &,
+    .dark &,
+    [data-theme='dark'] & {
+      color: #64748b;
+      &:hover {
+        color: #0f172a;
+      }
+    }
+  }
+
+  .nav-item-active {
+    color: #ffffff !important;
+    font-weight: 700;
+
+    /* In dark mode (white navbar): dark text on active pill */
+    html.dark &,
+    body.dark &,
+    .dark &,
+    [data-theme='dark'] & {
+      color: #0f172a !important;
+    }
+  }
+
+  // Active indicator pill
+  .island-active-indicator {
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+    z-index: 1;
+
+    /* In dark mode (white navbar): white elevated active pill */
+    html.dark &,
+    body.dark &,
+    .dark &,
+    [data-theme='dark'] & {
+      background: #ffffff;
+      border-color: rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+.app__navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  .mobile-menu-trigger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    /* In dark mode (white navbar): dark trigger */
+    html.dark &,
+    body.dark &,
+    .dark &,
+    [data-theme='dark'] & {
+      background: rgba(0, 0, 0, 0.06);
+      border-color: rgba(0, 0, 0, 0.1);
+      color: #0f172a;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media screen and (max-width: 900px) {
       display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-direction: column;
+    }
+  }
 
-      li {
-        margin: 1rem;
+  /* ModeToggle button contrast in dark mode (white navbar) */
+  html.dark &,
+  body.dark &,
+  .dark &,
+  [data-theme='dark'] & {
+    button[role="switch"] {
+      background: rgba(15, 23, 42, 0.07) !important;
+      border-color: rgba(15, 23, 42, 0.12) !important;
+      &:hover {
+        background: rgba(15, 23, 42, 0.12) !important;
+      }
+      svg {
+        color: #0284c7 !important;
+      }
+    }
+  }
+}
 
-        a {
-          color: var(--gray-color);
-          text-decoration: none;
-          font-size: 1rem;
-          text-transform: uppercase;
-          font-weight: 500;
-          transition: all 0.3s ease-in-out;
+// Full-screen backdrop overlay for mobile menu
+.mobile-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 7, 18, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 998;
+  pointer-events: auto;
+}
 
-          &:hover {
-            color: var(--secondary-color);
-          }
+// Mobile Slide-out Drawer with 100% Solid Opaque Background
+.mobile-menu-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 82%;
+  max-width: 320px;
+  height: 100vh;
+  height: 100dvh;
+  background: #0b0f19; // Solid 100% opaque dark navy - blocks all background elements from bleeding through
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: -16px 0 45px rgba(0, 0, 0, 0.85);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 999;
+  pointer-events: auto;
+
+  .light & {
+    background: #ffffff; // Solid 100% opaque white in light mode
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: -16px 0 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    .light & {
+      border-bottom-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .mobile-brand {
+      display: flex;
+      align-items: center;
+
+      .brand-shah {
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: #ffffff;
+        .light & { color: #0f172a; }
+      }
+
+      .brand-fahid {
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: #38bdf8;
+        margin-left: 0.35rem;
+        text-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+
+        .light & {
+          color: #2563eb;
+          text-shadow: none;
         }
       }
     }
 
-    @media screen and (min-width: 900px) {
-      display: none;
+    .mobile-menu-close {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      font-size: 1.35rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.18);
+        transform: scale(1.05);
+      }
+
+      .light & {
+        background: rgba(0, 0, 0, 0.05);
+        border-color: rgba(0, 0, 0, 0.1);
+        color: #0f172a;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.1);
+        }
+      }
     }
   }
 
-  @media screen and (min-width: 900px) {
-    display: none;
+  .mobile-menu-links {
+    list-style: none;
+    margin: 1.5rem 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+
+    li a {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      color: #cbd5e1;
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.2s ease;
+
+      .mobile-nav-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.25);
+        transition: all 0.2s ease;
+      }
+
+      .mobile-nav-label {
+        flex: 1;
+      }
+
+      &:hover,
+      &.mobile-active {
+        color: #ffffff;
+        background: rgba(56, 189, 248, 0.14);
+        border-color: rgba(56, 189, 248, 0.35);
+
+        .mobile-nav-dot {
+          background: #38bdf8;
+          box-shadow: 0 0 10px #38bdf8;
+          transform: scale(1.3);
+        }
+      }
+
+      .light & {
+        color: #334155;
+        background: rgba(0, 0, 0, 0.025);
+        border-color: rgba(0, 0, 0, 0.05);
+
+        .mobile-nav-dot {
+          background: rgba(0, 0, 0, 0.25);
+        }
+
+        &:hover,
+        &.mobile-active {
+          color: #2563eb;
+          background: rgba(37, 99, 235, 0.08);
+          border-color: rgba(37, 99, 235, 0.25);
+
+          .mobile-nav-dot {
+            background: #2563eb;
+            box-shadow: 0 0 8px rgba(37, 99, 235, 0.5);
+            transform: scale(1.3);
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-menu-footer {
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    .light & {
+      border-top-color: rgba(0, 0, 0, 0.06);
+    }
+
+    .mobile-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #94a3b8;
+      padding: 0.4rem 0.75rem;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+
+      .light & {
+        color: #64748b;
+        background: rgba(0, 0, 0, 0.03);
+        border-color: rgba(0, 0, 0, 0.06);
+      }
+
+      .status-ping-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #22c55e;
+        box-shadow: 0 0 6px #22c55e;
+      }
+    }
   }
 }
-
-@media screen and (max-width: 900px) {
-  .toggle {
-    display: none;
-  }
-}
-
-
-

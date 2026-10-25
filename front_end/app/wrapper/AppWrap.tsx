@@ -1,22 +1,16 @@
 import React from 'react';
 import { NavigationDots, SocialMedia } from '../components';
-import { useTheme } from 'next-themes';
 
-const AppWrap = (Component : any, idName: string, classNames: string) => function HOC() {
-  const { theme } = useTheme();
-
-  // Conditional class based on the theme
-  const conditionalClass = theme === 'light' ? classNames : `dark:bg-slate-900 ${classNames}`;
-
+const AppWrap = <P extends object>(
+  Component: React.ComponentType<P>,
+  idName: string,
+  classNames: string
+) => function HOC(props: P) {
   return (
-    <div id={idName} className={`app__container ${conditionalClass}`}>
+    <div id={idName} className={`app__container bg-[#f5f5f7] dark:bg-[#000000] transition-colors duration-300 w-full max-w-full overflow-x-hidden ${classNames}`}>
       <SocialMedia />
-      <div className="app__wrapper app__flex">
-        <Component />
-        <div className="copyright">
-          <p className="p-text dark:text-white">@2024 Shah Fahid</p>
-          <p className="p-text dark:text-white">All rights reserved</p>
-        </div>
+      <div className="app__wrapper app__flex w-full max-w-full overflow-x-hidden">
+        <Component {...props} />
       </div>
       <NavigationDots active={idName} />
     </div>

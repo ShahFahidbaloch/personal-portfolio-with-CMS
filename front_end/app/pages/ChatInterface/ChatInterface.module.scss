@@ -1,9 +1,7 @@
-
 .container {
   position: fixed;
-  bottom: 5%;
-  right: 20px;
-  transform: translateX(-20%);
+  bottom: 24px;
+  right: 24px;
   z-index: 100;
 }
 
@@ -12,11 +10,29 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    transform: scale(1.08);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.chatbotContainer {
+  margin-bottom: 12px;
 }
 
 .chatbotIframe {
-  border-radius: 15px; 
+  border-radius: 18px; 
   overflow: hidden; 
+  box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .show {
@@ -24,12 +40,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  
   .container {
-    bottom: 5%;
-    right: 20px;
-    transform: translateX(0%);
-    z-index: 100;
+    bottom: 18px;
+    right: 18px;
   }
-
 }

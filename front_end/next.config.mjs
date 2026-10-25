@@ -1,16 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // images: {
-  //   remotePatterns: [
-  //     {
-  //         protocol: 'https',
-  //         hostname: 'cdn.sanity.io',
-  //         port: '',
-  //     },
-  //     // Add more remote patterns if needed
-  //   ],
-  // },
+  reactStrictMode: true,
+  poweredByHeader: false,
+  compress: true,
   images: {
+    formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -18,11 +12,16 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'example.com',
+        hostname: 'images.unsplash.com',
       },
-      // Add more remote patterns for other domains if needed
     ],
-    // Specify other image configuration options as needed
+  },
+  webpack: (config) => {
+    config.watchOptions = {
+      ...config.watchOptions,
+      ignored: /pagefile\.sys|swapfile\.sys|hiberfil\.sys|DumpStack\.log/,
+    };
+    return config;
   },
 };
 

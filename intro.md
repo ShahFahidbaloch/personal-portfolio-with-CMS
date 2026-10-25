@@ -86,7 +86,7 @@ Is portfolio website ka primary goal hai mere skills, projects, aur professional
 ### Contact
 
 - **Contact Form:** Visitors ko directly website se messages bhejne ka form.
-- **Social Media Links:** Mere [GitHub](https://github.com/mrfahid), [LinkedIn](https://www.linkedin.com/in/shah-fahid-a4543027b), aur [TikTok](https://www.tiktok.com/@techdevhub) profiles ke links.
+- **Social Media Links:** Mere [GitHub](https://github.com/ShahFahidbaloch), [LinkedIn](https://www.linkedin.com/in/shah-fahid-a4543027b), aur [TikTok](https://www.tiktok.com/@techdevhub) profiles ke links.
 
 ## Development Process
 

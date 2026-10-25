@@ -1,7 +1,9 @@
+import type { TypedObject } from "@portabletext/types";
+
 export interface Post {
   title: string;
   overview: string;
-  content: any;
+  content: TypedObject | TypedObject[];
   _id: string;
   slug: {
     current: string;

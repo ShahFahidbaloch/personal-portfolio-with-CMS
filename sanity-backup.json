@@ -1,0 +1,774 @@
+{
+  "works": [
+    {
+      "_createdAt": "2024-03-30T16:41:32Z",
+      "_id": "0cd12da0-3faf-455e-a0d8-393cb6b5cca4",
+      "_rev": "zvLX5T63XNTvBDM1p0Eg9F",
+      "_type": "works",
+      "_updatedAt": "2024-05-19T08:06:57Z",
+      "codeLink": "https://github.com/mrfahid/blogs-site",
+      "description": "Developed a dynamic and responsive blog CMS (Content Management System) website using Next.js, integrating the powerful Sanity.io backend for seamless content management. The platform features a modern design, optimized performance, and intuitive user experience, enabling easy content creation and management. The website is fully responsive, ensuring a flawless browsing experience across all devices.  Key features include:  Real-time content updates with Sanity.io integration Customizable and SEO-friendly pages Interactive UI/UX with dark Mode  and scalable architecture hosted on Vercel This project highlights my skills in full-stack development, combining modern front-end technologies with robust backend services, delivering a professional-grade solution tailored for content creators and businesses.",
+      "imgUrl": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-c6714c79ff7c71d7b41af76d3c8daa1faa0959bf-1440x900-png",
+          "_type": "reference"
+        },
+        "crop": {
+          "_type": "sanity.imageCrop",
+          "bottom": 0.005594405594405605,
+          "left": 0.022727272727272735,
+          "right": 0,
+          "top": 0
+        },
+        "hotspot": {
+          "_type": "sanity.imageHotspot",
+          "height": 0.9944055944055944,
+          "width": 0.9772727272727273,
+          "x": 0.5113636363636364,
+          "y": 0.4972027972027972
+        }
+      },
+      "projectLink": "https://blogs-site-vert.vercel.app/",
+      "tags": [
+        "nextjs ",
+        "sanity"
+      ],
+      "title": "Next Js Blog CMS website"
+    },
+    {
+      "_createdAt": "2024-03-30T00:10:27Z",
+      "_id": "118ab7cb-5853-4d8c-8fdc-00bcfb90cd7c",
+      "_rev": "JE17z5ALC0VADTluP2UOra",
+      "_type": "works",
+      "_updatedAt": "2024-03-30T00:10:27Z",
+      "codeLink": "https://github.com/user/mrfahid",
+      "description": "I have create modern webapps",
+      "imgUrl": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-65ed72deac647aa84f75c5af8f6284ab926931b0-1200x900-png",
+          "_type": "reference"
+        }
+      },
+      "tags": [
+        "UI/UX",
+        "All"
+      ],
+      "title": "Modern UI/UX Design"
+    },
+    {
+      "_createdAt": "2024-03-30T16:39:57Z",
+      "_id": "38c18b3a-5892-4a1d-985f-a277d211096b",
+      "_rev": "kv3DnWIcy05RCWtHY6kTJi",
+      "_type": "works",
+      "_updatedAt": "2024-03-30T16:39:57Z",
+      "description": "this is full stuck website using apwrite",
+      "imgUrl": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-b62651ef34a9e54c354ee437545acc348fbf0505-1200x900-png",
+          "_type": "reference"
+        }
+      },
+      "tags": [
+        "Appwrite",
+        "saas"
+      ],
+      "title": "Full Stact website"
+    },
+    {
+      "_createdAt": "2024-03-30T16:37:16Z",
+      "_id": "63878179-6457-45b6-975a-9ec6983cb294",
+      "_rev": "yJXdOWbBKIrMH4D5wPUS4T",
+      "_type": "works",
+      "_updatedAt": "2024-03-30T16:37:16Z",
+      "description": "react modren good looking website ",
+      "imgUrl": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-90d71de50f2c6659156500e7a4d76a618e1fcd63-1200x900-png",
+          "_type": "reference"
+        }
+      },
+      "tags": [
+        "RTK",
+        "React"
+      ],
+      "title": "Modren React webApp"
+    }
+  ],
+  "testimonials": [
+    {
+      "_createdAt": "2024-04-02T14:56:21Z",
+      "_id": "a445cc31-09f3-4c32-8af4-22f3e1894836",
+      "_rev": "Sc54PIFFPAeRdvbzzSbQZq",
+      "_type": "testimonials",
+      "_updatedAt": "2024-05-21T17:04:11Z",
+      "company": "Google",
+      "feedback": "man outstading portfolio site",
+      "imgurl": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-7d45cc4842f6a490cf1d86590af582b60dd4f869-400x400-jpg",
+          "_type": "reference"
+        }
+      },
+      "name": "Mina"
+    },
+    {
+      "_createdAt": "2024-04-02T14:57:55Z",
+      "_id": "a4b64774-da4e-4085-86a9-d1379594ba9f",
+      "_rev": "Sc54PIFFPAeRdvbzzSbSiV",
+      "_type": "testimonials",
+      "_updatedAt": "2024-05-21T17:04:36Z",
+      "company": "Apple",
+      "feedback": "never look like this...",
+      "imgurl": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-db75aa27184d33e47768959204a9a8cac53184b3-225x225-jpg",
+          "_type": "reference"
+        }
+      },
+      "name": "eills wellimson"
+    },
+    {
+      "_createdAt": "2024-04-02T14:54:48Z",
+      "_id": "c8891fd5-2fa5-4284-aae4-86cfa2338d47",
+      "_rev": "3Au36TACh8j41B2g72iisv",
+      "_type": "testimonials",
+      "_updatedAt": "2024-05-21T17:07:50Z",
+      "company": "Amazon",
+      "feedback": "greet job stuning UI and funtionality",
+      "imgurl": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-0292f2b601a944c28e281e439c94584b84a1c0ca-392x220-jpg",
+          "_type": "reference"
+        }
+      },
+      "name": "Sarah"
+    }
+  ],
+  "brands": [
+    {
+      "_createdAt": "2024-04-02T14:59:06Z",
+      "_id": "370bf55c-9dd9-4cbf-be26-1937ee75b7ae",
+      "_rev": "EKGkCVl0DEZgAnGuRrae3M",
+      "_type": "brands",
+      "_updatedAt": "2026-05-17T07:49:16Z",
+      "imgUrl": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-fa3f69c1623a3848728f7d75ab6a32ca5f9b7c92-100x100-jpg",
+          "_type": "reference"
+        }
+      },
+      "name": "Iconic Studio"
+    },
+    {
+      "_createdAt": "2024-04-02T14:58:48Z",
+      "_id": "428385ed-ed64-4163-ab3e-3000c26cbad8",
+      "_rev": "rwTJtcql3cqMa6SQ8NZweM",
+      "_type": "brands",
+      "_updatedAt": "2026-05-17T07:50:05Z",
+      "imgUrl": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-d72d261bd124277d275beda2020fa394342b9acb-225x225-jpg",
+          "_type": "reference"
+        }
+      },
+      "name": "Shopify"
+    },
+    {
+      "_createdAt": "2024-04-02T15:00:01Z",
+      "_id": "f7e89660-f0c4-41ea-9607-4d27951b9094",
+      "_rev": "EKGkCVl0DEZgAnGuRrabnu",
+      "_type": "brands",
+      "_updatedAt": "2026-05-17T07:48:29Z",
+      "imgUrl": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-aedea34e30256e6b7715d3edfbd0d647771e3800-225x225-png",
+          "_type": "reference"
+        },
+        "crop": {
+          "_type": "sanity.imageCrop",
+          "bottom": 0,
+          "left": 0.018415374755859384,
+          "right": 0,
+          "top": 0.027381210327148457
+        },
+        "hotspot": {
+          "_type": "sanity.imageHotspot",
+          "height": 0.9315518188476563,
+          "width": 0.9408621215820313,
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "name": "Lazurde"
+    }
+  ],
+  "abouts": [
+    {
+      "_createdAt": "2024-03-27T17:37:06Z",
+      "_id": "67bb2b42-7731-44fd-8331-534eac335deb",
+      "_rev": "jflCSSOf3KxlYRWpzK4a1I",
+      "_type": "abouts",
+      "_updatedAt": "2024-03-27T17:37:06Z",
+      "description": "I know how make good CMS web apps",
+      "imgUrl": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-65ed72deac647aa84f75c5af8f6284ab926931b0-1200x900-png",
+          "_type": "reference"
+        }
+      },
+      "title": " Backend CMS"
+    },
+    {
+      "_createdAt": "2024-03-27T17:34:22Z",
+      "_id": "871d63c7-5dc1-46ea-8ba7-42b072d54870",
+      "_rev": "jflCSSOf3KxlYRWpzK4CGi",
+      "_type": "abouts",
+      "_updatedAt": "2024-03-27T17:34:22Z",
+      "description": "I now how make good and how make backend as a servise",
+      "imgUrl": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-90d71de50f2c6659156500e7a4d76a618e1fcd63-1200x900-png",
+          "_type": "reference"
+        }
+      },
+      "title": "backend Baas"
+    },
+    {
+      "_createdAt": "2024-03-27T17:35:50Z",
+      "_id": "b0ca7be8-0bc5-44f2-b11e-92a19fa520bf",
+      "_rev": "Sc54PIFFPAeRdvbzzOggUC",
+      "_type": "abouts",
+      "_updatedAt": "2024-05-20T17:32:21Z",
+      "description": "How make websit user experince  as wel as look good",
+      "imgUrl": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-b62651ef34a9e54c354ee437545acc348fbf0505-1200x900-png",
+          "_type": "reference"
+        }
+      },
+      "title": "UI & UX "
+    },
+    {
+      "_createdAt": "2024-03-26T14:32:28Z",
+      "_id": "b8febdcc-87c0-4099-b0f3-1671ca78465a",
+      "_rev": "g1wqjxC2WQtsXKxHtG2zED",
+      "_type": "abouts",
+      "_updatedAt": "2024-03-26T14:32:28Z",
+      "description": "Hi I know how make website",
+      "imgUrl": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-db53adca404b7410a2869db815e4ce77da2e7e53-1200x900-png",
+          "_type": "reference"
+        }
+      },
+      "title": "Web development"
+    }
+  ],
+  "experiences": [
+    {
+      "_createdAt": "2024-04-01T16:52:07Z",
+      "_id": "337c86c3-bfd3-48df-8e09-37fb91e86574",
+      "_rev": "rwTJtcql3cqMa6SQ8NuPDs",
+      "_type": "experiences",
+      "_updatedAt": "2026-05-17T08:05:51Z",
+      "works": [
+        {
+          "_key": "30692ef24bbe",
+          "_type": "workExperience",
+          "company": " Iconic Studio",
+          "desc": "Working on Lazurde, developing and maintaining scalable front-end and back-end solutions using headless CMS architecture, BigCommerce, and Amazon Web Services. Focused on performance optimization, API integrations, cloud infrastructure, and delivering seamless e-commerce experiences.",
+          "name": "Full Stack Engineer at Iconic Studio"
+        }
+      ],
+      "year": "2026"
+    }
+  ],
+  "skills": [
+    {
+      "_createdAt": "2024-04-01T16:30:14Z",
+      "_id": "13cf2a2a-2bb5-4c42-908b-f3b6ccf82a17",
+      "_rev": "kv3DnWIcy05RCWtHYBDaYu",
+      "_type": "skills",
+      "_updatedAt": "2024-04-01T16:30:14Z",
+      "bgColor": "#fef4f5",
+      "icon": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-64f3e20f8ad906d56dea96863b6db87fad6efb52-64x64-png",
+          "_type": "reference"
+        }
+      },
+      "name": "TypeScriptt"
+    },
+    {
+      "_createdAt": "2026-05-17T07:35:10Z",
+      "_id": "3e8efed9-0c6d-4591-8b94-31f0dfaff7f4",
+      "_rev": "rwTJtcql3cqMa6SQ8NOtG2",
+      "_type": "skills",
+      "_updatedAt": "2026-05-17T07:35:10Z",
+      "bgColor": "#FFFFFF",
+      "icon": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-47c76e8b88ec3e939b5bc7c39470f85f0c6989a4-225x225-png",
+          "_type": "reference"
+        }
+      },
+      "name": "MoongoDB"
+    },
+    {
+      "_createdAt": "2024-04-01T16:31:19Z",
+      "_id": "69650464-76d2-422c-8250-19ce3edc1721",
+      "_rev": "kv3DnWIcy05RCWtHYBE7Rb",
+      "_type": "skills",
+      "_updatedAt": "2024-04-01T16:31:19Z",
+      "bgColor": "#fef4f5",
+      "icon": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-2825d163301127c72b6121baebb5e570689596e5-480x480-png",
+          "_type": "reference"
+        }
+      },
+      "name": "Scss"
+    },
+    {
+      "_createdAt": "2026-05-17T07:37:54Z",
+      "_id": "8635415e-aba2-4b17-8517-1c1e9d5a98c2",
+      "_rev": "rwTJtcql3cqMa6SQ8SMB6a",
+      "_type": "skills",
+      "_updatedAt": "2026-05-17T12:46:49Z",
+      "bgColor": "#FFFFFF",
+      "icon": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-d72d261bd124277d275beda2020fa394342b9acb-225x225-jpg",
+          "_type": "reference"
+        }
+      },
+      "name": "Shopify"
+    },
+    {
+      "_createdAt": "2026-05-17T07:30:16Z",
+      "_id": "ca91eceb-8e85-4940-b609-0c789f1fa03a",
+      "_rev": "rwTJtcql3cqMa6SQ8NOkvi",
+      "_type": "skills",
+      "_updatedAt": "2026-05-17T07:33:29Z",
+      "bgColor": "#FFFFFF",
+      "icon": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-38f171efec4254399d84735de5487e83450fb7e4-225x225-png",
+          "_type": "reference"
+        }
+      },
+      "name": "Next.js"
+    },
+    {
+      "_createdAt": "2026-05-17T07:35:51Z",
+      "_id": "d195a83a-b539-4114-ae16-cef29b4b77f4",
+      "_rev": "rwTJtcql3cqMa6SQ8NQ8Ai",
+      "_type": "skills",
+      "_updatedAt": "2026-05-17T07:35:51Z",
+      "bgColor": "#FFFFFF",
+      "icon": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-2e4f2960ef019f1d8752e99ceb0a75aa1f3ab7d5-225x225-png",
+          "_type": "reference"
+        }
+      },
+      "name": "Node.js"
+    },
+    {
+      "_createdAt": "2024-04-01T16:23:43Z",
+      "_id": "ed047537-a4ea-4f65-b02a-5b77a8745771",
+      "_rev": "kv3DnWIcy05RCWtHYBDgbB",
+      "_type": "skills",
+      "_updatedAt": "2024-04-01T16:30:29Z",
+      "bgColor": "#f4f5f5",
+      "icon": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-34be54263e18fa2aea611c6b3b388b76e978e7d7-64x64-png",
+          "_type": "reference"
+        }
+      },
+      "name": "React"
+    },
+    {
+      "_createdAt": "2024-04-01T16:29:43Z",
+      "_id": "f4588bb7-1f3b-43ca-9d03-c507d08014ce",
+      "_rev": "kv3DnWIcy05RCWtHYBDSBK",
+      "_type": "skills",
+      "_updatedAt": "2024-04-01T16:29:43Z",
+      "bgColor": "#fef4f5",
+      "icon": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-91716227a0183f05eb4c2c846dda4ec6d3ea433c-480x480-png",
+          "_type": "reference"
+        }
+      },
+      "name": "Redux"
+    }
+  ],
+  "contact": [
+    {
+      "_createdAt": "2024-05-21T02:35:18Z",
+      "_id": "3Au36TACh8j41B2g6yJwJx",
+      "_rev": "3Au36TACh8j41B2g6yJwEj",
+      "_type": "contact",
+      "_updatedAt": "2024-05-21T02:35:18Z",
+      "email": "nomi4698dg@gmail.com",
+      "message": "Bahut hi acchi Hai 👍 good ",
+      "name": "Noman Nomi"
+    },
+    {
+      "_createdAt": "2024-08-17T09:24:54Z",
+      "_id": "FUs0T8fs80rhFGfqzbGUzp",
+      "_rev": "FUs0T8fs80rhFGfqzbGUwV",
+      "_type": "contact",
+      "_updatedAt": "2024-08-17T09:24:54Z",
+      "email": "",
+      "message": "",
+      "name": ""
+    },
+    {
+      "_createdAt": "2024-06-12T18:16:24Z",
+      "_id": "KuZNRKNnwVqEQLhugQieId",
+      "_rev": "KuZNRKNnwVqEQLhugQieEX",
+      "_type": "contact",
+      "_updatedAt": "2024-06-12T18:16:24Z",
+      "email": "umustapha76@gmail.com",
+      "message": "Keep up the good work 💪",
+      "name": "Mustapha Umar "
+    },
+    {
+      "_createdAt": "2024-05-21T16:46:17Z",
+      "_id": "YrO5XiTr2n0W9mZ4ts8Nta",
+      "_rev": "YrO5XiTr2n0W9mZ4ts8NsY",
+      "_type": "contact",
+      "_updatedAt": "2024-05-21T16:46:17Z",
+      "email": "",
+      "message": "",
+      "name": ""
+    },
+    {
+      "_createdAt": "2024-05-23T17:56:08Z",
+      "_id": "zpD4tb48zI9zXBVpXexghN",
+      "_rev": "zpD4tb48zI9zXBVpXexgdP",
+      "_type": "contact",
+      "_updatedAt": "2024-05-23T17:56:08Z",
+      "email": "siphesihledyalvane@gmail.com",
+      "message": "Good Job!",
+      "name": "Siphesihle Dyalvane"
+    }
+  ],
+  "post": [
+    {
+      "_createdAt": "2024-04-06T15:23:41Z",
+      "_id": "2df3ad0a-d6db-4ff3-a0fa-dd79d6f6551b",
+      "_rev": "DbTqvdcGi910mcIsEmtSeQ",
+      "_type": "post",
+      "_updatedAt": "2024-04-06T15:23:41Z",
+      "content": [
+        {
+          "_key": "0b2688f1b06a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "e85b774e88450",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Introduction"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "76715d57c1d0",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "b4e41ed4b58a0",
+              "_type": "span",
+              "marks": [],
+              "text": "Welcome to a day in my coding life! I'm a self-taught student who loves diving into the world of coding every day. Join me as I share how coding has become more than just a hobby—it's a part of my daily routine and a source of endless fascination."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "21d80a2f37dc",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "ef20fbb79838",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "e7f38f07d691",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "deadfd46e0140",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Morning Routine"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "8ba427a678cb",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "10d063ca200c0",
+              "_type": "span",
+              "marks": [],
+              "text": "My day starts with a cup of coffee and a dive into coding. I work on different projects, fix any issues I encounter, and explore new ideas. It's like solving puzzles and creating something new every day."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "ece9081a45ea",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "2a6ce3424dde",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "cc136588722b",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a3434f670ae10",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Learning Time"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "341e7176baba",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "eee7606d254f0",
+              "_type": "span",
+              "marks": [],
+              "text": "In the middle of the day, I take a break to learn more about coding. I watch tutorials, take online courses, and read about the latest trends. Learning new things keeps me excited and helps me improve my coding skills."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "6d291bbdd32d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d42b1e858a7f",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "d806f7972b15",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "c47aea0df0250",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Afternoon Coding Session"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "7e722c82f451",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "94e92b2276dd0",
+              "_type": "span",
+              "marks": [],
+              "text": "Back to coding in the afternoon! This is when I get really creative. I work on my own projects, try out new coding techniques, and sometimes collaborate with other coders online. It's like painting with code and bringing my ideas to life."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "9908ae37a480",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "5800a1e9608b",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "f3ca262492fb",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "36b9524388c30",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Evening Reflections"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "594e006ffc80",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "48da82e1189f0",
+              "_type": "span",
+              "marks": [],
+              "text": "As the day winds down, I take a moment to think about what I've accomplished. I look back at my progress, celebrate my successes, and learn from any mistakes. Every challenge is a chance to grow and become a better coder."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "8621bba96b08",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8d92b4a932950",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Nighttime Inspiration"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "3bb20c79e896",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "2c0b69bcec940",
+              "_type": "span",
+              "marks": [],
+              "text": "At night, I like to think about new coding ideas. The quiet helps me focus, and I often get inspired by looking at the stars outside my window. Coding is like exploring the universe—one line of code at a time."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "8ea669ca9dd5",
+          "_type": "image",
+          "alt": "coding",
+          "asset": {
+            "_ref": "image-85f17db26c7497359d790f26630a8bdcbed6a13e-220x123-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "3e2f8372850b",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d11910192f410",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Conclusion: A Journey of Learning"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "b3d54082f713",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "54c747007f2f0",
+              "_type": "span",
+              "marks": [],
+              "text": "Coding isn't just a hobby for me; it's a journey of constant learning and improvement. Each day brings new challenges and opportunities to expand my coding skills. I can't wait to see where this journey takes me next!"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "overview": "Welcome to a day in my coding life! I'm a self-taught student who loves diving into the world of coding every day. Join me as I share how coding has become more than just a hobby—it's a part of my daily routine and a source of endless fascination.",
+      "slug": {
+        "_type": "slug",
+        "current": "embracing-coding-a-day-in-my-routine"
+      },
+      "title": "Embracing Coding: A Day in My Routine"
+    }
+  ]
+}

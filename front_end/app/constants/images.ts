@@ -19,13 +19,19 @@ import chatbot from "../assets/chat-bot.webp";
 
 import logo from "../assets/logo.png";
 import logo4 from "../assets/logo4.png";
+import logos from "../assets/logos.png";
+import logos1 from "../assets/logos-trimmed.png";
+import logos3 from "../assets/logos-3.png";
 
 import nodejs from "../assets/node-js.png";
 import nextjs from "../assets/next-js.png";
 import mongodb from "../assets/mongoDB.png";
 
 
-export default {
+const images = {
+  logos,
+  logos1,
+  logos3,
   email,
   mobile,
   chatbot,
@@ -55,3 +61,5 @@ export default {
   nextjs,
   mongodb,
 };
+
+export default images;

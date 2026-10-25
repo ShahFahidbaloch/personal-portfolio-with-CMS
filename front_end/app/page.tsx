@@ -1,20 +1,14 @@
-import React from 'react';
-import { Navbar } from "./components";
+import React from "react";
+import Navbar from "./components/Navbar/Navbar";
 import { About, Header, Work, Skills, Testimonial, Footer } from "./pages";
-import './App.scss';
-import { ThemeProvider } from 'next-themes';
-import ChatInterface from './pages/ChatInterface/ChatInterface';
+import "./App.scss";
+import ChatInterface from "./pages/ChatInterface/ChatInterface";
 
 export default function Home() {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      <div className="app">
-        <Navbar />
+    <div className="app">
+      <Navbar />
+      <main id="main-content">
         <Header />
         <About />
         <Work />
@@ -22,7 +16,7 @@ export default function Home() {
         <Testimonial />
         <ChatInterface />
         <Footer />
-      </div>
-    </ThemeProvider>
+      </main>
+    </div>
   );
 }
