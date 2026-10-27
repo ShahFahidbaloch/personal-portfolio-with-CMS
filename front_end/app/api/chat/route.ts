@@ -268,9 +268,9 @@ function getFallbackAnswer(userQuestion: string): string {
     q.includes("linkedin")
   ) {
     if (urdu) {
-      return "Aap Shah Fahid se direct Email (shahfahidbaloch@gmail.com) ya direct WhatsApp/Phone (+92 336 8558700) par rabta kar sakte hain. Wo clients aur recruiters ko quick response dete hain. Inka verified code GitHub par bhi available hai: https://github.com/ShahFahidbaloch.";
+      return "Aap Shah Fahid se direct Email (fahid@shahfahad.tech) ya direct WhatsApp/Phone (+92 336 8558700) par rabta kar sakte hain. Wo clients aur recruiters ko quick response dete hain. Inka verified code GitHub par bhi available hai: https://github.com/ShahFahidbaloch.";
     }
-    return "You can contact Shah Fahid directly via Email at shahfahidbaloch@gmail.com or on WhatsApp/Phone at +92 336 8558700. His verified open-source work is available on GitHub: https://github.com/ShahFahidbaloch and LinkedIn: https://www.linkedin.com/in/shah-fahid-a4543027b/.";
+    return "You can contact Shah Fahid directly via Email at fahid@shahfahad.tech or on WhatsApp/Phone at +92 336 8558700. His verified open-source work is available on GitHub: https://github.com/ShahFahidbaloch and LinkedIn: https://www.linkedin.com/in/shah-fahid-a4543027b/.";
   }
 
   // 12. Technical Skills & Languages
@@ -321,17 +321,17 @@ function getFallbackAnswer(userQuestion: string): string {
     q.includes("cost")
   ) {
     if (urdu) {
-      return "Shah Fahid full-time engineering roles, remote contracts, freelance web development, aur technical consulting ke liye actively available hain. Unki rates project scope aur milestones ke mutabiq competitive hain. Aap direct email (shahfahidbaloch@gmail.com) ya WhatsApp (+92 336 8558700) par project details discuss kar sakte hain.";
+      return "Shah Fahid full-time engineering roles, remote contracts, freelance web development, aur technical consulting ke liye actively available hain. Unki rates project scope aur milestones ke mutabiq competitive hain. Aap direct email (fahid@shahfahad.tech) ya WhatsApp (+92 336 8558700) par project details discuss kar sakte hain.";
     }
-    return "Shah Fahid is actively available for full-time frontend/full-stack engineering roles, remote contracts, and freelance projects. He offers flexible remote hours across UK, EU, Middle East, and US time zones. Rates are competitive and structured per project milestones. Feel free to reach out directly at shahfahidbaloch@gmail.com or via WhatsApp at +92 336 8558700.";
+    return "Shah Fahid is actively available for full-time frontend/full-stack engineering roles, remote contracts, and freelance projects. He offers flexible remote hours across UK, EU, Middle East, and US time zones. Rates are competitive and structured per project milestones. Feel free to reach out directly at fahid@shahfahad.tech or via WhatsApp at +92 336 8558700.";
   }
 
   // 15. CV / Resume Download
   if (q.includes("cv") || q.includes("resume") || q.includes("download")) {
     if (urdu) {
-      return "Aap Shah Fahid ka verified CV is website ke Hero section mein mojood direct 'Download CV' button se fori download kar sakte hain, ya unhe direct email (shahfahidbaloch@gmail.com) par request bhej sakte hain.";
+      return "Aap Shah Fahid ka verified CV is website ke Hero section mein mojood direct 'Download CV' button se fori download kar sakte hain, ya unhe direct email (fahid@shahfahad.tech) par request bhej sakte hain.";
     }
-    return "You can download Shah Fahid's verified CV directly via the 'Download CV' button in the Hero section of this website, or request an updated copy via email at shahfahidbaloch@gmail.com.";
+    return "You can download Shah Fahid's verified CV directly via the 'Download CV' button in the Hero section of this website, or request an updated copy via email at fahid@shahfahad.tech.";
   }
 
   // 16. Fallback if the query mentions Shah / developer / work but was not caught above
@@ -345,9 +345,9 @@ function getFallbackAnswer(userQuestion: string): string {
     q.includes("work")
   ) {
     if (urdu) {
-      return "Shah Fahid ek Frontend-Focused Full Stack Developer hain jo React.js, Next.js (App Router), TypeScript, aur headless e-commerce (Shopify & BigCommerce) mein deliver karte hain. Aap unke projects (L'AZURDE, Perky Pear), skills, experience, ya direct rabte ke baare mein mazeed pooch sakte hain (+92 336 8558700 / shahfahidbaloch@gmail.com).";
+      return "Shah Fahid ek Frontend-Focused Full Stack Developer hain jo React.js, Next.js (App Router), TypeScript, aur headless e-commerce (Shopify & BigCommerce) mein deliver karte hain. Aap unke projects (L'AZURDE, Perky Pear), skills, experience, ya direct rabte ke baare mein mazeed pooch sakte hain (+92 336 8558700 / fahid@shahfahad.tech).";
     }
-    return "Shah Fahid is a Frontend-Focused Full Stack Developer specializing in React.js, Next.js (App Router), TypeScript, and headless e-commerce. Feel free to ask about his work on L'AZURDE, technical skills, production projects, or get in touch at shahfahidbaloch@gmail.com (+92 336 8558700).";
+    return "Shah Fahid is a Frontend-Focused Full Stack Developer specializing in React.js, Next.js (App Router), TypeScript, and headless e-commerce. Feel free to ask about his work on L'AZURDE, technical skills, production projects, or get in touch at fahid@shahfahad.tech (+92 336 8558700).";
   }
 
   // 17. Unrecognized query without clear portfolio connection -> Prompt user for clear scope

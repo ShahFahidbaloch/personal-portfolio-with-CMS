@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowUp, ArrowUpRight, Check, Copy } from "lucide-react";
-import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { AppWrap } from "../../wrapper";
 import "./Footer.scss";
 
@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("shahfahidbaloch@gmail.com");
+    navigator.clipboard.writeText("fahid@shahfahad.tech");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -62,9 +62,9 @@ const Footer: React.FC = () => {
         </h2>
 
         {/* Direct Email Action Pill */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-3">
           <a
-            href="mailto:shahfahidbaloch@gmail.com"
+            href="mailto:fahid@shahfahad.tech"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-neutral-950 dark:bg-white text-white dark:text-black font-medium text-xs sm:text-sm hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors shadow-sm"
           >
             <span>Get in touch</span>
@@ -85,12 +85,33 @@ const Footer: React.FC = () => {
             ) : (
               <>
                 <Copy className="w-3.5 h-3.5 text-neutral-500 dark:text-neutral-400" />
-                <span>shahfahidbaloch@gmail.com</span>
+                <span>fahid@shahfahad.tech</span>
               </>
             )}
           </button>
         </div>
 
+        {/* Quick Contact: WhatsApp (local clients) & General Inquiries Email */}
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
+          <a
+            href="https://wa.me/923368558700?text=Hi%20Fahid%2C%20I%20found%20you%20via%20your%20portfolio."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black/[0.04] dark:bg-white/[0.06] hover:bg-black/[0.08] dark:hover:bg-white/[0.12] border border-black/10 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 text-neutral-900 dark:text-white font-medium text-xs sm:text-sm transition-all"
+            aria-label="Chat with Shah Fahid on WhatsApp"
+          >
+            <FaWhatsapp className="w-4 h-4 text-neutral-700 dark:text-neutral-300" />
+            <span>Chat on WhatsApp</span>
+            <ArrowUpRight className="w-3.5 h-3.5 text-neutral-500 dark:text-neutral-400" />
+          </a>
+
+          <a
+            href="mailto:info@shahfahad.tech"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-black/[0.04] dark:bg-white/[0.06] hover:bg-black/[0.08] dark:hover:bg-white/[0.12] border border-black/10 dark:border-white/10 text-xs sm:text-sm font-mono text-neutral-700 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white transition-all"
+          >
+            <span>info@shahfahad.tech</span>
+          </a>
+        </div>
         {/* Navigation & Social Row */}
         <div className="w-full max-w-2xl flex flex-wrap items-center justify-between gap-4 py-6 border-y border-black/[0.08] dark:border-white/[0.08] mb-8 transition-colors">
           {/* Social Links */}
