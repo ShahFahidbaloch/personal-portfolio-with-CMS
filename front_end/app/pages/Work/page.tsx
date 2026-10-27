@@ -78,6 +78,17 @@ const PROJECTS_DATA: Project[] = [
     clientType: "Shopify Plus Brand",
   },
   {
+    id: "dental-clinic",
+    title: "Dental Clinic Landing Page",
+    tags: ["React Js", "Web App", "Tailwind CSS"],
+    description:
+      "Modern dental clinic landing page engineered with React, TypeScript, and Tailwind CSS. Features interactive treatments and patient booking CTAs.",
+    image: "/projects/dental.jpg",
+    liveUrl: "https://master-dental-template-bay.vercel.app/",
+    githubUrl: "https://github.com/ShahFahidbaloch/dental-site/tree/main/master-dental-template",
+    clientType: "Healthcare Template",
+  },
+  {
     id: "personal-blog",
     title: "Personal Blog Platform",
     tags: ["Next.js", "React Js", "Web App"],

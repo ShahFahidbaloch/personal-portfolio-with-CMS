@@ -67,9 +67,13 @@ Communication Guidelines for the AI:
    - Shopify theme development and conversion-focused customizations for a live UK D2C fashion and shapewear brand.
 3. Marly Dan:
    - Production Shopify store customizations, UI enhancement, and theme styling.
-4. Personal Dynamic Blog Platform:
+4. Dental Clinic Landing Page (master-dental-template-bay.vercel.app):
+   - High-conversion healthcare practice web experience engineered with React.js, TypeScript, Vite, Tailwind CSS, Shadcn UI, Radix UI Primitives, and Framer Motion micro-interactions.
+   - Features responsive appointment booking flows, interactive treatment breakdowns, PRSI & fee schedules, and light/dark theme support.
+   - Source code: https://github.com/ShahFahidbaloch/dental-site/tree/main/master-dental-template
+5. Personal Dynamic Blog Platform:
    - Built with Next.js App Router, Tailwind CSS, and Sanity CMS; features full server-side rendering (SSR), dynamic routing, and automated SEO metadata generation.
-5. Portfolio AI Chatbot & Showcase:
+6. Portfolio AI Chatbot & Showcase:
    - Deployed on Vercel with 100 Lighthouse performance metrics; integrates real-time OpenAI Chat Completions streaming into React via custom hooks.
 
 =======================================================

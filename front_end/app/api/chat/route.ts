@@ -238,18 +238,20 @@ function getFallbackAnswer(userQuestion: string): string {
     return "Shah Fahid has over 3+ years of professional web engineering experience, specializing in Next.js (App Router), React, TypeScript, and Node.js. At Superior eCommerce Ltd (via Iconic Studio), he integrated Apple Pay express checkout on L'AZURDE's multi-regional headless storefront and resolved complex Cloudflare edge CDN caching conflicts, delivering sub-second load times and 100 Lighthouse scores.";
   }
 
-  // 10. Projects (L'AZURDE, Perky Pear, Marly Dan, Dynamic Blog)
+  // 10. Projects (L'AZURDE, Dental Clinic, Perky Pear, Marly Dan, Dynamic Blog)
   if (
     q.includes("lazurde") ||
     q.includes("perky") ||
     q.includes("project") ||
+    q.includes("dental") ||
+    q.includes("clinic") ||
     q.includes("marly") ||
     q.includes("portfolio website")
   ) {
     if (urdu) {
-      return "Shah Fahid ke major production projects mein shamil hain: 1) L'AZURDE (lazurde.com) — Middle East ka leading luxury jewelry brand jahan Apple Pay checkout aur CDN edge caching stabilize ki; 2) Perky Pear UK (perkypear.com) — UK D2C fashion brand ka custom Shopify theme engineering; 3) Marly Dan — production Shopify theme customization; aur 4) Dynamic Blog & Portfolio — built with Next.js App Router, Sanity CMS, aur real-time AI streaming.";
+      return "Shah Fahid ke major production projects mein shamil hain: 1) L'AZURDE (lazurde.com) — Middle East ka leading luxury jewelry brand jahan Apple Pay checkout integrate ki; 2) Dental Clinic Landing Page (master-dental-template-bay.vercel.app) — Modern React, TypeScript aur Tailwind CSS based clinic web app with interactive treatment schedules; 3) Perky Pear UK (perkypear.com) — UK D2C fashion brand ka custom Shopify theme; 4) Marly Dan — production Shopify customization; aur 5) Dynamic Blog & Portfolio — built with Next.js App Router, Sanity CMS, aur real-time AI streaming.";
     }
-    return "Key production projects engineered by Shah Fahid include: 1) L'AZURDE (lazurde.com) — Luxury jewelry brand in KSA, UAE & Egypt with Apple Pay checkout and CDN edge cache stabilization; 2) Perky Pear UK (perkypear.com) — UK D2C fashion shapewear brand with custom Shopify theme development; 3) Marly Dan — Shopify theme customizations; and 4) Dynamic Blog & Portfolio — built with Next.js App Router, Sanity CMS, and real-time AI streaming.";
+    return "Key production projects engineered by Shah Fahid include: 1) L'AZURDE (lazurde.com) — Luxury jewelry brand in KSA, UAE & Egypt with Apple Pay checkout and CDN edge cache stabilization; 2) Dental Clinic Landing Page (master-dental-template-bay.vercel.app) — High-conversion healthcare web app built with React, TypeScript, Tailwind CSS, Shadcn UI & Framer Motion; 3) Perky Pear UK (perkypear.com) — UK D2C fashion shapewear brand with custom Shopify theme development; 4) Marly Dan — Shopify theme customizations; and 5) Dynamic Blog & Portfolio — built with Next.js App Router, Sanity CMS, and real-time AI streaming.";
   }
 
   // 11. Contact, WhatsApp, Email, Phone, Socials
