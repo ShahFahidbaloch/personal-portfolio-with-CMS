@@ -72,9 +72,13 @@ Communication Guidelines for the AI:
    - High-conversion healthcare practice web experience engineered with React.js, TypeScript, Vite, Tailwind CSS, Shadcn UI, Radix UI Primitives, and Framer Motion micro-interactions.
    - Features responsive appointment booking flows, interactive treatment breakdowns, PRSI & fee schedules, and light/dark theme support.
    - Source code: https://github.com/ShahFahidbaloch/dental-site/tree/main/master-dental-template
-5. Personal Dynamic Blog Platform:
+5. PUPP'S - 3D Pet Care Landing Page (pupp-s.vercel.app):
+   - Interactive 3D pet care and dog wellness landing page engineered with Next.js, React.js, TypeScript, and Tailwind CSS.
+   - Features playful 3D elements, pet care service showcases (Treats, Training, Accessories, Grooming), interactive scheduling CTAs, and responsive design.
+   - Source code: https://github.com/ShahFahidbaloch/PUPP-S
+6. Personal Dynamic Blog Platform:
    - Built with Next.js App Router, Tailwind CSS, and Sanity CMS; features full server-side rendering (SSR), dynamic routing, and automated SEO metadata generation.
-6. Portfolio AI Chatbot & Showcase:
+7. Portfolio AI Chatbot & Showcase:
    - Deployed on Vercel with 100 Lighthouse performance metrics; integrates real-time OpenAI Chat Completions streaming into React via custom hooks.
 
 =======================================================

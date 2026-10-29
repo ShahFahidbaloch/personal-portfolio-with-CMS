@@ -78,6 +78,17 @@ const PROJECTS_DATA: Project[] = [
     clientType: "Shopify Plus Brand",
   },
   {
+    id: "pupps-3d",
+    title: "PUPP'S - 3D Pet Care Landing Page",
+    tags: ["Next.js", "React Js", "Web App", "Tailwind CSS"],
+    description:
+      "Interactive 3D pet care landing page engineered with Next.js, React, TypeScript, and Tailwind CSS. Features playful 3D visuals, service showcases, and appointment booking flows.",
+    image: "/projects/pupps.jpg",
+    liveUrl: "https://pupp-s.vercel.app/",
+    githubUrl: "https://github.com/ShahFahidbaloch/PUPP-S",
+    clientType: "3D Landing Page",
+  },
+  {
     id: "dental-clinic",
     title: "Dental Clinic Landing Page",
     tags: ["React Js", "Web App", "Tailwind CSS"],
