@@ -64,21 +64,28 @@ Communication Guidelines for the AI:
 1. L'AZURDE (lazurde.com):
    - Multi-regional headless BigCommerce storefront serving KSA, Egypt, and UAE in English & Arabic.
    - Integrated Apple Pay, fixed CDN edge cache synchronization, and solved uppercase-URL redirect anomalies.
-2. Perky Pear UK (perkypear.com):
+2. D.CC — Multi-Store Restaurant POS & QR System:
+   - Full-stack multi-store restaurant POS, Kitchen Display System (KDS), and contactless QR table ordering system engineered with Next.js 15, React 19, TypeScript, Turborepo, and Tailwind CSS.
+   - Zero-download contactless QR table ordering module routing diner customizations and vouchers directly to real-time kitchen queues.
+   - Real-time Kitchen Display System (KDS) with progressive order tracking and live timers, cutting kitchen communication delays by ~40%.
+   - Mathematically strict whole-rupee cash-tender math and 5% automated GST tax calculations to eliminate fractional rounding drift in daily cash reconciliation.
+   - Integrated Schema.org JSON-LD and Generative Engine Optimization (GEO/AEO) standards (llms.txt) for AI and search crawler indexation.
+   - Client access: Proprietary enterprise POS. Private live demos arranged directly via WhatsApp (+92 336 8558700).
+3. Perky Pear UK (perkypear.com):
    - Shopify theme development and conversion-focused customizations for a live UK D2C fashion and shapewear brand.
-3. Marly Dan:
+4. Marly Dan:
    - Production Shopify store customizations, UI enhancement, and theme styling.
-4. Dental Clinic Landing Page (master-dental-template-bay.vercel.app):
+5. Dental Clinic Landing Page (master-dental-template-bay.vercel.app):
    - High-conversion healthcare practice web experience engineered with React.js, TypeScript, Vite, Tailwind CSS, Shadcn UI, Radix UI Primitives, and Framer Motion micro-interactions.
    - Features responsive appointment booking flows, interactive treatment breakdowns, PRSI & fee schedules, and light/dark theme support.
    - Source code: https://github.com/ShahFahidbaloch/dental-site/tree/main/master-dental-template
-5. PUPP'S - 3D Pet Care Landing Page (pupp-s.vercel.app):
+6. PUPP'S - 3D Pet Care Landing Page (pupp-s.vercel.app):
    - Interactive 3D pet care and dog wellness landing page engineered with Next.js, React.js, TypeScript, and Tailwind CSS.
    - Features playful 3D elements, pet care service showcases (Treats, Training, Accessories, Grooming), interactive scheduling CTAs, and responsive design.
    - Source code: https://github.com/ShahFahidbaloch/PUPP-S
-6. Personal Dynamic Blog Platform:
+7. Personal Dynamic Blog Platform:
    - Built with Next.js App Router, Tailwind CSS, and Sanity CMS; features full server-side rendering (SSR), dynamic routing, and automated SEO metadata generation.
-7. Portfolio AI Chatbot & Showcase:
+8. Portfolio AI Chatbot & Showcase:
    - Deployed on Vercel with 100 Lighthouse performance metrics; integrates real-time OpenAI Chat Completions streaming into React via custom hooks.
 
 =======================================================

@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Github, ArrowUpRight, ShieldCheck } from "lucide-react";
+import { Github, ArrowUpRight, ShieldCheck, ChevronDown, ChevronUp, Lock } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./work.scss";
 
@@ -18,10 +19,12 @@ interface Project {
   tags: string[];
   description: string;
   image: string;
-  liveUrl: string;
+  liveUrl?: string;
   githubUrl?: string;
   clientType?: string;
   regionalLinks?: RegionalLink[];
+  demoType?: "live" | "whatsapp";
+  whatsappMessage?: string;
 }
 
 const CATEGORIES = ["All", "E-Commerce", "Next.js", "Shopify", "React Js", "Web App"];
@@ -41,6 +44,18 @@ const PROJECTS_DATA: Project[] = [
       { label: "Egypt", url: "https://lazurde.com/eg-en" },
       { label: "UAE", url: "https://lazurde.com/ae-en" },
     ],
+  },
+  {
+    id: "dcc-pos",
+    title: "D.CC — Multi-Store Restaurant POS & QR System",
+    tags: ["Next.js", "React Js", "Web App", "Fintech & POS"],
+    description:
+      "Full-stack multi-store Restaurant POS & zero-download contactless QR table ordering system with real-time Kitchen Display System (KDS), strict cash reconciliation, and 5% automated GST billing.",
+    image: "/projects/dcc-pos.jpg",
+    clientType: "Fintech & POS SaaS",
+    demoType: "whatsapp",
+    whatsappMessage:
+      "Hi Shah Fahid, I would like to request a live demo of the D.CC Restaurant POS & QR Ordering System.",
   },
   {
     id: "miss-l",
@@ -129,12 +144,18 @@ const springConfig = {
   damping: 28,
 };
 
+const INITIAL_VISIBLE_COUNT = 6;
+
 const WorkSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState("All");
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT);
 
   const filteredProjects = PROJECTS_DATA.filter((project) =>
     activeTab === "All" ? true : project.tags.includes(activeTab)
   );
+
+  const visibleProjects = filteredProjects.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredProjects.length;
 
   return (
     <section className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 pt-20 sm:pt-24 lg:pt-28 pb-16 sm:pb-24 select-none">
@@ -161,7 +182,10 @@ const WorkSection: React.FC = () => {
               <button
                 key={tab}
                 type="button"
-                onClick={() => setActiveTab(tab)}
+                onClick={() => {
+                  setActiveTab(tab);
+                  setVisibleCount(INITIAL_VISIBLE_COUNT);
+                }}
                 className={`relative px-3 sm:px-4 py-1.5 rounded-full text-xs font-medium transition-colors cursor-pointer select-none whitespace-nowrap shrink-0 ${
                   isActive
                     ? "text-neutral-900 dark:text-white"
@@ -186,14 +210,14 @@ const WorkSection: React.FC = () => {
       <div className="w-full min-h-[440px]">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
-            key={activeTab}
+            key={`${activeTab}-${visibleCount}`}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.16, ease: "easeOut" }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6"
           >
-            {filteredProjects.map((project) => (
+            {visibleProjects.map((project) => (
               <article
                 key={project.id}
                 className="hero-card-surface rounded-[22px] sm:rounded-[32px] p-4 sm:p-5 lg:p-5 xl:p-6 flex flex-col justify-between h-full group transition-all duration-300 ease-out overflow-hidden"
@@ -250,9 +274,9 @@ const WorkSection: React.FC = () => {
                   </p>
                 </div>
 
-                {/* Bottom Half: Clean Action Pills & Live Preview (NEVER cut off on mobile or any device) */}
+                {/* Bottom Half: Clean Action Pills & Live Preview / WhatsApp Demo */}
                 <div className="mt-5 pt-3.5 sm:pt-4 border-t border-black/[0.05] dark:border-white/[0.06] flex items-center justify-between gap-2">
-                  {/* Left: Either Regional Stores OR GitHub Source OR Production Verified */}
+                  {/* Left: Either Regional Stores OR GitHub Source OR Enterprise SaaS / Production Verified */}
                   <div className="flex items-center min-w-0 flex-1">
                     {project.regionalLinks ? (
                       <div className="flex items-center gap-1 overflow-x-auto no-scrollbar py-0.5">
@@ -283,6 +307,11 @@ const WorkSection: React.FC = () => {
                         <Github className="w-3.5 h-3.5" />
                         <span>Source</span>
                       </a>
+                    ) : project.demoType === "whatsapp" ? (
+                      <span className="text-[11px] font-medium text-neutral-400 dark:text-neutral-500 inline-flex items-center gap-1.5 shrink-0">
+                        <Lock className="w-3.5 h-3.5 text-neutral-400 dark:text-neutral-500 shrink-0" />
+                        <span className="truncate">Proprietary POS</span>
+                      </span>
                     ) : (
                       <span className="text-[11px] font-medium text-neutral-400 dark:text-neutral-500 inline-flex items-center gap-1.5 shrink-0">
                         <ShieldCheck className="w-3.5 h-3.5 text-neutral-400 dark:text-neutral-500 shrink-0" />
@@ -291,22 +320,72 @@ const WorkSection: React.FC = () => {
                     )}
                   </div>
 
-                  {/* Right: Functional, Unclipped Live Preview Button (100% visible on every device) */}
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="bg-neutral-900 hover:bg-neutral-800 text-white dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200 px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-medium inline-flex items-center gap-1.5 shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98] shrink-0 whitespace-nowrap ml-auto"
-                  >
-                    <span>Live Preview</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 opacity-80 shrink-0" />
-                  </a>
+                  {/* Right: Functional Action Button (WhatsApp Demo or Live Preview) */}
+                  {project.demoType === "whatsapp" ? (
+                    <a
+                      href={`https://wa.me/923368558700?text=${encodeURIComponent(
+                        project.whatsappMessage ||
+                          "Hi Shah Fahid, I would like to request a demo of the D.CC Restaurant POS & QR System."
+                      )}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="bg-[#25D366] hover:bg-[#20ba59] text-white px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-medium inline-flex items-center gap-1.5 shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98] shrink-0 whitespace-nowrap ml-auto"
+                    >
+                      <FaWhatsapp className="w-3.5 h-3.5 shrink-0" />
+                      <span>Request Demo</span>
+                    </a>
+                  ) : (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="bg-neutral-900 hover:bg-neutral-800 text-white dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200 px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-medium inline-flex items-center gap-1.5 shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98] shrink-0 whitespace-nowrap ml-auto"
+                    >
+                      <span>Live Preview</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 opacity-80 shrink-0" />
+                    </a>
+                  )}
                 </div>
               </article>
             ))}
           </motion.div>
         </AnimatePresence>
       </div>
+
+      {/* ================= 4. LOAD MORE / RELOAD TOGGLE BUTTON ================= */}
+      {filteredProjects.length > INITIAL_VISIBLE_COUNT && (
+        <div className="flex justify-center mt-10 sm:mt-12">
+          <button
+            type="button"
+            onClick={() => {
+              if (hasMore) {
+                setVisibleCount(filteredProjects.length);
+              } else {
+                setVisibleCount(INITIAL_VISIBLE_COUNT);
+                const el = document.getElementById("projects");
+                if (el) {
+                  const yOffset = -80;
+                  const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              }
+            }}
+            className="group inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium bg-neutral-100 hover:bg-neutral-200 dark:bg-white/[0.06] dark:hover:bg-white/[0.12] border border-black/10 dark:border-white/10 text-neutral-800 dark:text-neutral-200 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-sm"
+          >
+            {hasMore ? (
+              <>
+                <span>View More Projects ({filteredProjects.length - visibleCount} more)</span>
+                <ChevronDown className="w-4 h-4 text-neutral-500 group-hover:translate-y-0.5 transition-transform" />
+              </>
+            ) : (
+              <>
+                <span>Show Less</span>
+                <ChevronUp className="w-4 h-4 text-neutral-500 group-hover:-translate-y-0.5 transition-transform" />
+              </>
+            )}
+          </button>
+        </div>
+      )}
     </section>
   );
 };
