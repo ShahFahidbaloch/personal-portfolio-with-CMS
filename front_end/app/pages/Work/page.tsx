@@ -329,7 +329,7 @@ const WorkSection: React.FC = () => {
                       )}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="bg-[#25D366] hover:bg-[#20ba59] text-white px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-medium inline-flex items-center gap-1.5 shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98] shrink-0 whitespace-nowrap ml-auto"
+                      className="bg-neutral-900 hover:bg-neutral-800 text-white dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200 px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-medium inline-flex items-center gap-1.5 shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98] shrink-0 whitespace-nowrap ml-auto"
                     >
                       <FaWhatsapp className="w-3.5 h-3.5 shrink-0" />
                       <span>Request Demo</span>
